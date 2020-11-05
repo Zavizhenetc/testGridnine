@@ -1,0 +1,12 @@
+dist
+dist/
+vs-code
+.vscode
+node_modules
+node_modules/
+._*
+.git
+.DS_Store
+.AppleDouble
+.LSOverride
+.idea
