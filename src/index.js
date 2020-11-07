@@ -15,30 +15,17 @@ import {TEMPLATE, CARDLIST, SHOW_MORE_BUTTON, URL_API} from './js/constans/const
 const flyCardsList = new CardList(CARDLIST)
 const api = new Api(URL_API);
 const storage = new DataStorage();
-// csl(SHOW_MORE_BUTTON);
 
 
+// получаем и записываем в сторедж данные с сервера , рендерим
 
-// добавляем еще билетов
-SHOW_MORE_BUTTON.addEventListener('click', () => {
-  showMore(count());
-})
-
-
-// записываем в сторедж данные с сервера 
-api
-    .getRes()
-    .then((res) => {
-      storage.set(res)
-    })
-    .catch((err) => {
-      console.log(`Ошибка ${err} `);
-    });
-    
-
-// рендер данных
-function getStorageCards(){
-  window.count = 0;
+function getApi(){
+  api.getRes()
+  .then((res) => {
+    storage.clear;
+    storage.set(res);
+  }).then((res)=>{
+    window.count = 4;
     const storageCards = storage.getCards();
     const filterCards = storageCards.result.flights.map(({ flight }) => flight);
 
@@ -48,12 +35,19 @@ function getStorageCards(){
     const cardsSlice = flyCard.slice(0, 4);
     flyCardsList.render(cardsSlice);
   }
+   
+  )
+  .catch((err) => {
+    console.log(`Ошибка ${err} `);
+  });
+};
+
 
   // считаем количество билетов 
   function count() {
     let count = window.count;
     if (isNaN(count) || count === 0) {
-      return 6;
+      return 4;
     }
     return count + 4;
   }
@@ -70,5 +64,12 @@ function getStorageCards(){
     flyCardsList.render(cardsSlice);
     window.count = cardsSlice.length;
   }
+  
+ // добавляем еще билетов
+ SHOW_MORE_BUTTON.addEventListener('click', () => {
+  showMore(count());
+})
 
-  getStorageCards();
+getApi();
+
+ 
