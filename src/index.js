@@ -8,7 +8,7 @@ import Api from './js/modules/Api';
 import DataStorage from './js/modules/DataStorage';
 import Card from './js/components/flyCard';
 import CardList from './js/components/flyCardList';
-import {TEMPLATE, CARDLIST, SHOW_MORE_BUTTON} from './js/constans/constans';
+import {TEMPLATE, CARDLIST, SHOW_MORE_BUTTON, URL_API} from './js/constans/constans';
 
 
 
@@ -17,7 +17,7 @@ import {TEMPLATE, CARDLIST, SHOW_MORE_BUTTON} from './js/constans/constans';
 // const SHOW_MORE_BUTTON = document.querySelector('#show-more-button');
 
 const flyCardsList = new CardList(CARDLIST)
-const api = new Api();
+const api = new Api(URL_API);
 const storage = new DataStorage();
 // csl(SHOW_MORE_BUTTON);
 getStorageCards();

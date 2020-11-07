@@ -1,9 +1,11 @@
 export default class Api {
-  constructor() {
+  constructor(url) {
+    this.url = url
   }
 
   getRes() {
-    return fetch('src/js/constans/flights.json', {
+    console.log(this.url);
+    return fetch(this.url, {
       method: "GET",
     }).then((res)=>  this._getResponseData(res));
   
