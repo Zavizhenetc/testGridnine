@@ -8,12 +8,13 @@ import Api from './js/modules/Api';
 import DataStorage from './js/modules/DataStorage';
 import Card from './js/components/flyCard';
 import CardList from './js/components/flyCardList';
+import {TEMPLATE, CARDLIST, SHOW_MORE_BUTTON} from './js/constans/constans';
 
 
 
-const TEMPLATE = document.querySelector('.template').content
-const CARDLIST = document.querySelector('.container')
-const SHOW_MORE_BUTTON = document.querySelector('#show-more-button');
+// const TEMPLATE = document.querySelector('.template').content
+// const CARDLIST = document.querySelector('.container')
+// const SHOW_MORE_BUTTON = document.querySelector('#show-more-button');
 
 const flyCardsList = new CardList(CARDLIST)
 const api = new Api();
