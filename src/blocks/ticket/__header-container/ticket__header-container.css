@@ -1,0 +1,5 @@
+.ticket__header-container{
+  display: flex;
+  flex-direction: column;
+  text-align:right;
+}

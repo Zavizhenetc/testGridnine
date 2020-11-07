@@ -1,0 +1,22 @@
+@import url('__departure-city/ticket-to__departure-city.css');
+@import url('__departure-airport-caption/ticket-to__departure-airport-caption.css');
+@import url('__departure-airport-uid/ticket-to__departure-airport-uid.css');
+@import url('__arrival-city/ticket-to__arrival-city.css');
+@import url('__departure-airport-caption/ticket-to__departure-airport-caption.css');
+@import url('__arrival-airport-uid/ticket-to__arrival-airport-uid.css');
+@import url('__times/ticket-to__times.css');
+@import url('__departure-time/ticket-to__departure-time.css');
+@import url('__departure-date/ticket-to__departure-date.css');
+@import url('__duration/ticket-to__duration.css');
+@import url('__duration-hours/ticket-to__duration-hours.css');
+@import url('__duration-minutes/ticket-to__duration-minutes.css');
+@import url('__arrival-time/ticket-to__arrival-time.css');
+@import url('__arrival-date/ticket-to__arrival-date.css');
+@import url('__transfer/ticket-to__transfer.css');
+@import url('__transfer-num/ticket-to__transfer-num.css');
+@import url('__aircompany/ticket-to__aircompany.css');
+
+
+.ticket-to{
+  margin-bottom: 2%;
+}

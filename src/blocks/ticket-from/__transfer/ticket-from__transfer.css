@@ -1,0 +1,14 @@
+.ticket-from__transfer {
+  display: flex;
+  align-items: center;
+  padding-left: 4%;
+  padding-right: 4%;
+}
+.ticket-from__transfer hr {
+  max-width: 50%;
+  min-width: 30%;
+  height: 0;
+  border-top-color: rgb(162, 162, 162);
+  border-top-style: solid;
+  border-top-width: 1px ;
+}

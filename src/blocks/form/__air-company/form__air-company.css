@@ -1,0 +1,5 @@
+.form__air-company{
+  display: flex;
+  flex-direction: column;
+  border: none;
+}

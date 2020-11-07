@@ -1,0 +1,9 @@
+.form__price-filter{
+  border: none;
+  display: flex;
+  flex-direction: column;
+  margin-top: 3%;
+}
+.form__price-filter .form__input{
+margin-bottom: 7%;
+}

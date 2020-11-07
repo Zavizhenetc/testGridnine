@@ -1,0 +1,5 @@
+.ticket-from__times {
+  display: flex;
+  justify-content: space-between;
+  padding-right: 4%;
+}

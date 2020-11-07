@@ -1,0 +1,20 @@
+@import url('main/main.css');
+@import url('filter-aside/filter-aside.css');
+@import url('form/form.css');
+@import url('tickets/tickets.css');
+@import url('ticket/ticket.css');
+@import url('ticket-to/ticket-to.css');
+@import url('ticket-from/ticket-from.css');
+@import url('button/button.css');
+@import url('button/_place-ticket/button_place-ticket.css');
+@import url('time-container/time-container.css');
+
+
+.root{
+ background-color: grey;
+ font-family: 'Open Sans';
+ font-style: normal;
+ font-weight: normal;
+ font-size: 14px;
+ box-sizing: border-box;
+}

@@ -10,11 +10,15 @@
 
 ``git clone https://github.com/Zavizhenetc/testGridnine.git``
 
-2.Собираем  
+2.устанавливаем зависимости 
+
+``npm i `` 
+
+3.Собираем  
 
 ``npm run build``
 
-3.Разворачиваем на локальном  
+4.Разворачиваем на локальном  
 
 ``npm run dev``
 

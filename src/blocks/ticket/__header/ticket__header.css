@@ -1,0 +1,7 @@
+.ticket__header{
+  background-color:#0687c9;
+  display: flex;
+  justify-content: space-between;
+  padding: 1% 2%;
+  color: white;
+}

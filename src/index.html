@@ -1,11 +1,217 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-</head>
-<body>
-  
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Alex Zavizhenetc" />
+    <title>Gridnine</title>
+    <link rel="stylesheet" href="<%= htmlWebpackPlugin.files.css %>" />
+    <link rel="icon" href="<%= require('./images/icon_cat.png').default%>" />
+  </head>
+  <body class="root">
+    <section class="main">
+      <aside class="filter-aside">
+        <form action="" id="form" class="form">
+          <fieldset class="form__price-sort">
+            <legend class="form__title">Сортировать</legend>
+            <label class="form__label">
+              <input
+                id="ascending-price"
+                type="radio"
+                class="form__input"
+                name="sort"
+              />
+              - по возрастанию цены
+            </label>
+            <label class="form__label">
+              <input
+                id="descending-price"
+                type="radio"
+                class="form__input"
+                name="sort"
+              />
+              - по убыванию цены
+            </label>
+            <label class="form__label">
+              <input
+                id="travel-time"
+                type="radio"
+                class="form__input"
+                name="sort"
+              />
+              - по времени в пути
+            </label>
+          </fieldset>
+          <fieldset class="form__transfer-filter">
+            <legend class="form__title">Фильтровать</legend>
+            <label class="form__label">
+              <input
+                id="one-transfer"
+                type="checkbox"
+                class="form__input"
+                name="filter"
+              />
+              - 1 пересадка
+            </label>
+            <label class="form__label">
+              <input
+                id="no-transfer"
+                type="checkbox"
+                class="form__input"
+                name="filter"
+              />
+              - без пересадок
+            </label>
+          </fieldset>
+          <fieldset class="form__price-filter">
+            <legend class="form__title">Цена</legend>
+            <label class="form__label">
+              От
+              <input
+                id="min-price"
+                class="form__input"
+                type="number"
+                name="number"
+                value="0"
+                min="0"
+              />
+            </label>
+            <label class="form__label">
+              До
+              <input
+                id="max-price"
+                class="form__input"
+                type="number"
+                name="number"
+                value="100000"
+                min="0"
+              />
+            </label>
+          </fieldset>
+          <fieldset class="form__air-company">
+            <legend class="form__title">Авиакомпании</legend>
+            <label class="form__label">
+              <input
+                id="air-company"
+                type="checkbox"
+                class="form__input"
+                name="filter"
+              />
+              -
+              <span class="form__air-company-name"> LOT Polish Airlines</span>
+              от <span class="form__air-company-price">21 049 р</span>
+            </label>
+          </fieldset>
+        </form>
+      </aside>
+
+      <div class="tickets">
+        <div class="container">
+          <template class="template">
+            <div class="ticket">
+              <div class="ticket__header">
+                <img
+                  src="./images/icon_cat.png"
+                  alt="лого"
+                  class="ticket__header-logo"
+                />
+                <div class="ticket__header-container">
+                  <p class="ticket__header-price">
+                    0000 <span class="ticket__header-price-currency">RUB</span>
+                  </p>
+                  <span class="ticket__header-price-description">
+                    Стоимость для одного взрослого пассажира
+                  </span>
+                </div>
+              </div>
+              <div class="ticket__container">
+                <div class="ticket-to">
+                  <span class="ticket-to__departure-city">Москва</span>,
+                  <span class="ticket-to__departure-airport-caption"
+                    >Шереметьево</span
+                  >
+                  <span class="ticket-to__departure-airport-uid">(svo)</span>
+                  &rarr; <span class="ticket-to__arrival-city">Лондон</span>,
+                  <span class="ticket-to__arrival-airport-caption"
+                    >Хитроу Лондон</span
+                  >
+                  <span class="ticket-to__arrival-airport-uid">(lhr)</span>
+                  <div class="ticket-to__times">
+                    <div class="time-container">
+                      <p class="ticket-to__departure-time">00:00</p>
+                      <span class="ticket-to__departure-date">18 авг вт </span>
+                    </div>
+
+                    <p class="ticket-to__duration">
+                      <span class="ticket-to__duration-hours">🕑 00 </span> Ч
+                      <span class="ticket-to__duration-minutes">00 </span> МИН
+                    </p>
+                    <div class="time-container">
+                      <span class="ticket-to__arrival-date">18 авг вт </span>
+                      <p class="ticket-to__arrival-time">00:00</p>
+                    </div>
+                  </div>
+                  <div class="ticket-to__transfer">
+                    <hr />
+                    <span class="ticket-to__transfer-num">пересадка</span>
+                    <hr />
+                  </div>
+                  <p class="ticket-to__aircompany">
+                    Рейс выполняет: Ipsum loren
+                  </p>
+                </div>
+
+                <div class="ticket-from__container">
+                  <span class="ticket-from__departure-city">Лондон</span>,
+                  <span class="ticket-from__departure-airport-caption"
+                    >Хитроу Лондон</span
+                  >
+                  <span class="ticket-from__departure-airport-uid"
+                    >(lhr)</span
+                  >
+                  &rarr;
+
+                  <span class="ticket-from__arrival-city">Москва</span>,
+                  <span class="ticket-from__arrival-airport-caption"
+                    >Шереметьево</span
+                  >
+                  <span class="ticket-from__arrival-airport-uid">(svo)</span>
+                  <div class="ticket-from__times">
+                    <div class="time-container">
+                      <p class="ticket-from__departure-time">00:00</p>
+                      <span class="ticket-from__departure-date"
+                        >18 авг вт
+                      </span>
+                    </div>
+                    <p class="ticket-from__duration">
+                      <span class="ticket-from__duration-hours">00 </span> Ч
+                      <span class="ticket-from__duration-minutes">00 </span> МИН
+                    </p>
+                    <div class="time-container">
+                      <span class="ticket-from__arrival-date">18 авг вт </span>
+                      <p class="ticket-from__arrival-time">0:00</p>
+                    </div>
+                  </div>
+                  <div class="ticket-from__transfer">
+                    <hr />
+                    <span class="ticket-from__transfer-num">пересадка</span>
+                    <hr />
+                  </div>
+                  <p class="ticket-from__aircompany">
+                    Рейс выполняет: Ipsum loren
+                  </p>
+                </div>
+              </div>
+              <button class="button button_place-ticket" type="submit">
+                выбрать
+              </button>
+            </div>
+          </template>
+        </div>
+        <button class="button">Показать еще</button>
+      </div>
+    </section>
+
+    <script type="module" src="<%= htmlWebpackPlugin.files.js %>"></script>
+  </body>
 </html>

@@ -1,0 +1,6 @@
+.form__transfer-filter {
+  border: none;
+  display: flex;
+  flex-direction: column;
+  margin-top: 10%;
+}

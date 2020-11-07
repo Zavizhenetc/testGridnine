@@ -1,0 +1,5 @@
+.form__price-sort{
+  display: flex;
+  flex-direction: column;
+  border: none;
+}

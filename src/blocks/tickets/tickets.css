@@ -1,0 +1,7 @@
+.tickets {
+  width: 70%;
+  padding-right: 4.5%;
+  padding-top: 1.5%;
+  display: flex;
+  flex-direction: column;
+}
