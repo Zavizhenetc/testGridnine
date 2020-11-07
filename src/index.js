@@ -16,7 +16,7 @@ const flyCardsList = new CardList(CARDLIST)
 const api = new Api(URL_API);
 const storage = new DataStorage();
 // csl(SHOW_MORE_BUTTON);
-getStorageCards();
+
 
 
 // добавляем еще билетов
@@ -71,3 +71,4 @@ function getStorageCards(){
     window.count = cardsSlice.length;
   }
 
+  getStorageCards();
