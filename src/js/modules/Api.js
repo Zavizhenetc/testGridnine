@@ -4,7 +4,6 @@ export default class Api {
   }
 
   getRes() {
-    console.log(this.url);
     return fetch(this.url, {
       method: "GET",
     }).then((res)=>  this._getResponseData(res));

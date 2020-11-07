@@ -12,10 +12,6 @@ import {TEMPLATE, CARDLIST, SHOW_MORE_BUTTON, URL_API} from './js/constans/const
 
 
 
-// const TEMPLATE = document.querySelector('.template').content
-// const CARDLIST = document.querySelector('.container')
-// const SHOW_MORE_BUTTON = document.querySelector('#show-more-button');
-
 const flyCardsList = new CardList(CARDLIST)
 const api = new Api(URL_API);
 const storage = new DataStorage();
@@ -46,8 +42,6 @@ function getStorageCards(){
     const storageCards = storage.getCards();
     const filterCards = storageCards.result.flights.map(({ flight }) => flight);
 
-    csl(filterCards);
-
     const flyCard = filterCards.map((data) => {
       return new Card(data, TEMPLATE).createCard();
     });
@@ -67,8 +61,6 @@ function getStorageCards(){
   function showMore(count) {
     const storageCards = storage.getCards();
     const filterCards = storageCards.result.flights.map(({ flight }) => flight);
-
-    // csl(filterCards);
 
     const flyCard = filterCards.map((data) => {
       return new Card(data, TEMPLATE).createCard();
